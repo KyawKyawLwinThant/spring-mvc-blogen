@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<div th:fragment="dashboard">
+  <header class="py-3 bg-primary text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h1><i class="fas fa-cog mr-2"></i>Dashboard</h1>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="py-3 mb-4 bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <a href="#" class="btn btn-primary btn-block"><i class="fas fa-plus mr-1"></i> Add Post</a>
+          </div>
+          <div class="col-md-4">
+            <a href="#" class="btn btn-success btn-block" data-toggle="modal" data-target="#addCategoryModal"><i class="fas fa-plus mr-1"></i>Add Categories</a>
+          </div>
+          <div class="col-md-4">
+            <a href="#" class="btn btn-warning btn-block"><i class="fas fa-plus mr-1"></i>Add Users</a>
+          </div>
+        </div>
+      </div>
+  </section>
+
+<!--Add Category Modal-->
+<div class="modal fade" id="addCategoryModal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <form action="#">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title">Add Category</h5>
+        <button class="close" data-dismiss="modal">
+          <span>&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <div class="form-group">
+            <label for="title">Title</label>
+            <input id="title" type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="datePosted">Date Posted</label>
+            <input id="datePosted" type="date" class="form-control">
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-success">Save</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
